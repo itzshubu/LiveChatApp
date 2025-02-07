@@ -19,7 +19,7 @@ import User from "../models/user.model.js"
         }
         req.user = user;
         next()
-    } catch (error) {
+    } catch (error) {  
         console.log("error in secure route", error)
         res.status(500).json({ error: "internal server error" })
     }
